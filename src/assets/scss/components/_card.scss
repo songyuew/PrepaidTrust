@@ -37,6 +37,7 @@
         h4 {
             font-size: $card-title-font-size;
             font-weight: bold;
+            text-align: center;
         }
         & ~ .card-body {
             padding-top: 0;
@@ -47,6 +48,7 @@
     }
     .card-title {
         font-size: 1.2rem;
+        text-align: center;
     }
     .card-body {
         padding: $card-cap-padding-y $card-cap-padding-x;
