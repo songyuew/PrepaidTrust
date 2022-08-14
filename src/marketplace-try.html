@@ -1,0 +1,65 @@
+{% set title = 'Marketplace Try' %}
+{% set filename = 'marketplace-try.html' %}
+
+{% extends 'layouts/master.html' %}
+{% block content %}
+<div class="page-heading">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Card</h3>
+                <p class="text-subtitle text-muted">Bootstrap’s cards provide a flexible and extensible content
+                    container with multiple variants and options.</p>
+            </div>
+            <div class="col-12 col-md-6 order-md-2 order-first">
+                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Card</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Try card section start -->
+    <section id="content-types">
+        <div class="row">
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <h4 class="card-title">Test Card</h4>
+                        </div>
+                        <img class="img-fluid w-100" src="assets/images/samples/banana.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <span>Issuer: Test Store</span>
+                        <div>
+                        <button class="btn btn-ouline-primary">Buy now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <h4 class="card-title">Card With Header And Footer</h4>
+                            <p class="card-text">
+                                Gummies bonbon apple pie fruitcake icing biscuit apple pie jelly-o sweet roll. Toffee
+                                sugar plum sugar plum jelly-o jujubes bonbon dessert carrot cake.
+                            </p>
+                        </div>
+                        <img class="img-fluid w-100" src="assets/images/samples/banana.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <span>Card Footer</span>
+                        <button class="btn btn-light-primary">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Try Card types section end -->
+
+</div>
+{% endblock %}

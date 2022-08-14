@@ -9,6 +9,11 @@
     "icon": "grid-fill"
   },
   {
+    "name": "Marketplace",
+    "url": "component-marketplace-try.html",
+    "icon": "grid-fill"
+  },
+  {
     "name": "Components",
     "key": "component",
     "icon": "stack",
