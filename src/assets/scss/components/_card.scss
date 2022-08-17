@@ -95,11 +95,56 @@
 
     .card-body {
         padding-bottom: 0.5rem;
+        --red: #ef1400;
+        --gold: #b68e0b;
+        --grey: #cccccc;
+        --black: #000000;
+        --darkgreen: #00842c;
+        --darkblue: #28386b;
 
-        .card-name {
+        .red {
+            color: var(--red) !important;
+        }
+        .gold {
+            color: var(--gold) !important;
+        }
+        .grey {
+            color: var(--grey) !important;
+        }
+        .black {
+            color: var(--black) !important;
+        }
+        .darkgreen {
+            color: var(--darkgreen) !important;
+        }
+        .darkblue {
+            color: var(--darkblue) !important;
+        }
+        .underline {
+            text-decoration: underline !important;
+        }
+
+        .card-category {
             font-size: 1rem !important;
             font-weight: bolder !important;
-            color: #28386b !important;
+            color: var(--darkblue);
+            white-space: pre-wrap;
+        }
+
+        .card-link {
+            color: var(--grey);
+        }
+        .link-darkgreen:hover {
+            text-decoration: underline !important;
+            color: var(--darkgreen) !important;
+        }
+        .link-black:hover {
+            text-decoration: underline !important;
+            color: var(--black) !important;
+        }
+
+        .card-text {
+            white-space: pre-wrap;
         }
 
         .card-image {

@@ -53,22 +53,14 @@ block content %}
 
                             <!-- Card Name-->
                             <div>
-                                <text class="card-name">
-                                    Card Name
-                                </text>
-                                <text class="card-text">
-                                    Default name 1
-                                </text>
+                                <text class="card-category">Card Name  </text>
+                                <text class="card-text">Default name</text>
                             </div>
 
                             <!-- Merchant Name -->
                             <div>
-                                <text class="card-name">
-                                    Merchant Name  
-                                </text>
-                                <text class="card-text">
-                                    Default merchant
-                                </text>
+                                <text class="card-category">Merchant Name  </text>
+                                <text class="card-text">Default merchant</text>
                             </div>
 
                             <!-- Card Image -->
@@ -87,9 +79,7 @@ block content %}
                                     data-bs-target="#card-info"
                                     aria-expanded="true"
                                     aria-controls="card-info"
-                                >
-                                    Card Info
-                                </button>
+                                >Card Info</button>
                             </div>
 
                         </p>
@@ -97,9 +87,30 @@ block content %}
                         <!-- Set the card detail inside the collapse -->
                         <div class="collapse" id="card-info">
 
-                            <div class="card-"
+                            <!-- Remaining value -->
+                            <div>
+                                <text class="card-category gold">Remaining value  </text>
+                                <text class="card-text">$$$</text>
+                            </div>
+
+                            <!-- Expiration time -->
+                            <div>
+                                <text class="card-category red">Expiration time  </text>
+                                <text class="card-text">Unknown</text>
+                            </div>
+
+                            <!-- Bill records -->
+                            <div>
+                                <a href=# class="card-category grey card-link link-darkgreen">Bill records</a>
+                            </div>
+
+                            <!-- Add black list -->
+                            <div>
+                                <a href=# class="card-category grey card-link link-black">Add black list</a>
+                            </div>
 
                             <div class="empty-line"></div>
+
                         </div>
                     </div>
 
@@ -111,10 +122,30 @@ block content %}
 
     </section>
 
-
-
-
-
 </div>
+
+{% endblock %} {% block js %}
+
+<script>
+
+console.log("Loading the JavaScript for the consumer dashboard. ");
+
+var card_info_btn = document.getElementsByClassName(
+    "card-info-button"
+);
+for (var i = 0; i < card_info_btn.length; i++) {
+    card_info_btn[i].addEventListener('click', function (event) {
+        if (event.target.textContent === "Card Info") {
+            event.target.textContent = "Hide Card Info";
+        } else {
+            event.target.textContent = "Card Info";
+        }  
+    });
+}
+
+console.log("Finish loading the JavaScript for the consumer dashboard. ");
+
+</script>
+<!-- <script src="assets/js/components/button.js"></script> -->
 
 {% endblock %}
