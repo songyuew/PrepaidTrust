@@ -1,7 +1,8 @@
-{% set title = 'Consumer Dashboard' %} {% set filename =
-'layout-vertical-navbar.html' %} {% extends 'layouts/vertical-navbar.html' %} {%
-block content %}
+{% set title = 'Consumer Dashboard' %}
+{% set filename = 'layout-vertical-navbar.html' %}
+{% extends 'layouts/vertical-navbar.html' %}
 
+{% block content %}
 <div class="page-heading">
     <div class="page-title">
         <div class="row">
@@ -29,26 +30,26 @@ block content %}
         </div>
     </div>
 
-
-
-
-
-    <!-- Try Collapse -->
+    <!-- The consumer cards HTML starts here-->
+    <!-- We would like to use JS to fill in the HTML-->
     <section id="consumer-cards">
+
         <div class="row match-height">
 
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12 JS-consumer-cards">
 
-                <div class="card consumer-card">
+                <!-- Example card. -->
+                <div class="card consumer-card" id="example ID">
 
-                    <!-- The card header -->
+                    <!-- Card header -->
                     <div class="card-header">
                         <h3 class="card-title">Card 1</h3>
                     </div>
 
-                    <!-- The card body -->
+                    <!-- Card body -->
                     <div class="card-body">
 
+                        <!-- Information above the Card Info button-->
                         <p>
 
                             <!-- Card Name-->
@@ -65,9 +66,15 @@ block content %}
 
                             <!-- Card Image -->
                             <div class="card-image">
-                                <img class="img-fluid w-100" src="assets/images/samples/samples-card/customer-gift-card.png" alt="This image cannot be displayed">
+                                <img class="img-fluid w-100" src="assets/images/samples/samples-card/customer-gift-card.png" alt="The Card Image cannot be displayed">
                             </div>
 
+                            <div class="empty-line"></div>
+
+                            <!-- Card Info -->
+                            <div>
+                                <text class="card-text">Default card information</text>
+                            </div>
                             <div class="empty-line"></div>
 
                             <!-- Card Info Button-->
@@ -84,13 +91,14 @@ block content %}
 
                         </p>
 
-                        <!-- Set the card detail inside the collapse -->
+                        <!-- Card Info -->
+                        <!-- Try: collapse -->
                         <div class="collapse" id="card-info">
 
                             <!-- Remaining value -->
                             <div>
-                                <text class="card-category gold">Remaining value  </text>
-                                <text class="card-text">$$$</text>
+                                <text class="card-category darkgreen">Remaining value  </text>
+                                <text class="card-text">Unknown</text>
                             </div>
 
                             <!-- Expiration time -->
@@ -100,13 +108,13 @@ block content %}
                             </div>
 
                             <!-- Bill records -->
-                            <div>
-                                <a href=# class="card-category grey card-link link-darkgreen">Bill records</a>
+                            <div id="default-consumer-card">
+                                <a onclick="consumerCard.setTargetCard(this.id)" href="consumer-bill-records.html" class="card-category grey card-link">Bill records</a>
                             </div>
 
                             <!-- Add black list -->
                             <div>
-                                <a href=# class="card-category grey card-link link-black">Add black list</a>
+                                <a href=# class="card-category grey card-link">Add black list</a>
                             </div>
 
                             <div class="empty-line"></div>
@@ -123,29 +131,13 @@ block content %}
     </section>
 
 </div>
+{% endblock %}
 
-{% endblock %} {% block js %}
+{% block js %}
 
-<script>
+<!-- Card Info Button function-->
+<script type="text/javascript" src="assets/js/components/button.js"></script>
 
-console.log("Loading the JavaScript for the consumer dashboard. ");
-
-var card_info_btn = document.getElementsByClassName(
-    "card-info-button"
-);
-for (var i = 0; i < card_info_btn.length; i++) {
-    card_info_btn[i].addEventListener('click', function (event) {
-        if (event.target.textContent === "Card Info") {
-            event.target.textContent = "Hide Card Info";
-        } else {
-            event.target.textContent = "Card Info";
-        }  
-    });
-}
-
-console.log("Finish loading the JavaScript for the consumer dashboard. ");
-
-</script>
-<!-- <script src="assets/js/components/button.js"></script> -->
-
+<!-- comsumerCard Database function -->
+<script type="text/javascript" src="assets/js/components/consumerCard.js"></script>
 {% endblock %}
