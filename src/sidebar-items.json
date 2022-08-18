@@ -9,9 +9,30 @@
     "icon": "grid-fill"
   },
   {
+    "name": "Merchant Dashboard",
+    "url": "merchant-dashboard.html",
+    "icon": "grid-fill"
+  },
+  {
     "name": "Marketplace",
     "url": "marketplace.html",
     "icon": "basket-fill"
+  },
+  {
+    "name": "Select Cards",
+    "url": "merchant-cards.html",
+    "icon": "stack"
+  },
+  {
+    "name": "Issuance Information",
+    "icon": "hexagon-fill",
+    "key": "issuance-information",
+    "menu": [
+      {
+        "name": "Card A",
+        "url": "merchant-issuanceInfo.html"
+      }
+    ]
   },
   {
     "name": "My Cards",
@@ -357,6 +378,10 @@
       {
         "name": "Register",
         "url": "auth-register.html"
+      },
+      {
+        "name": "Merchant Registration",
+        "url": "merchant-registration.html"
       },
       {
         "name": "Forgot Password",
