@@ -1,22 +1,41 @@
 [
   {
-    "name": "Menu",
+    "name": "Market",
     "isTitle": true
-  },
-  {
-    "name": "Dashboard",
-    "url": "index.html",
-    "icon": "grid-fill"
-  },
-  {
-    "name": "Merchant Dashboard",
-    "url": "merchant-dashboard.html",
-    "icon": "grid-fill"
   },
   {
     "name": "Marketplace",
     "url": "marketplace.html",
     "icon": "basket-fill"
+  },
+
+  {
+    "name": "Customer",
+    "isTitle": true
+  },
+  {
+    "name": "My Cards",
+    "url": "consumer-cards.html",
+    "icon": "card-heading"
+  },
+
+  {
+    "name": "________________",
+    "isTitle": true
+  },
+  {
+    "name": "Merchant",
+    "isTitle": true
+  }, 
+  {
+    "name": "Register",
+    "url": "merchant-registration.html",
+    "icon": "person-badge-fill"
+  },
+  {
+    "name": "Merchant Profile",
+    "url": "merchant-dashboard.html",
+    "icon": "grid"
   },
   {
     "name": "Select Cards",
@@ -24,20 +43,23 @@
     "icon": "stack"
   },
   {
-    "name": "Issuance Information",
-    "icon": "hexagon-fill",
-    "key": "issuance-information",
-    "menu": [
-      {
-        "name": "Card A",
-        "url": "merchant-issuanceInfo.html"
-      }
-    ]
+    "name": "Issue Card",
+    "url": "merchant-issuanceInfo.html",
+    "icon": "hexagon-fill"
   },
   {
-    "name": "My Cards",
-    "url": "consumer-dashboard.html",
-    "icon": "card-heading"
+    "name": "________________",
+    "isTitle": true
+  },
+
+  {
+    "name": "Menu",
+    "isTitle": true
+  },
+  {
+    "name": "Dashboard",
+    "url": "index.html",
+    "icon": "grid-fill"
   },
 
   {
@@ -378,10 +400,6 @@
       {
         "name": "Register",
         "url": "auth-register.html"
-      },
-      {
-        "name": "Merchant Registration",
-        "url": "merchant-registration.html"
       },
       {
         "name": "Forgot Password",
