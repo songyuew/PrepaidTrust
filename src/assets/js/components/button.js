@@ -1,5 +1,4 @@
-console.log("Loading the JavaScript for the consumer dashboard. ");
-
+console.log("🟨 JavaScript - Card Info button. ");
 var card_info_btn = document.getElementsByClassName("card-info-button");
 for (var i = 0; i < card_info_btn.length; i++) {
     card_info_btn[i].addEventListener("click", function (event) {
@@ -10,5 +9,4 @@ for (var i = 0; i < card_info_btn.length; i++) {
         }
     });
 }
-
-console.log("Finish loading the JavaScript for the consumer dashboard. ");
+console.log("✅ JavaScript - Card Info button (finished). ");

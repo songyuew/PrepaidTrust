@@ -1,5 +1,30 @@
 [
   {
+    "name": "Market",
+    "isTitle": true
+  },
+  {
+    "name": "Marketplace",
+    "url": "marketplace.html",
+    "icon": "basket-fill"
+  },
+
+  {
+    "name": "Customer",
+    "isTitle": true
+  },
+  {
+    "name": "My Cards",
+    "url": "consumer-cards.html",
+    "icon": "card-heading"
+  },
+
+  {
+    "name": "________________",
+    "isTitle": true
+  },
+
+  {
     "name": "Menu",
     "isTitle": true
   },
@@ -8,16 +33,8 @@
     "url": "index.html",
     "icon": "grid-fill"
   },
-  {
-    "name": "Marketplace",
-    "url": "marketplace.html",
-    "icon": "basket-fill"
-  },
-  {
-    "name": "My Cards",
-    "url": "consumer-dashboard.html",
-    "icon": "card-heading"
-  },
+
+
 
   {
     "name": "Issuance",
