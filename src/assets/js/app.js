@@ -312,11 +312,12 @@ newConsumerCard.displayConsumerCard();
 console.log("✅ JavaScript - Consumer Card Class (finished). ");
 
 // Temporarily moved from button.js to app.js
-console.log("🟨 JavaScript - Card Info button. ");
+console.log("🟨 JavaScript - Consumer Card Info button. ");
 
-let card_info_btn = document.getElementsByClassName("card-info-button");
-for (var i = 0; i < card_info_btn.length; i++) {
-    card_info_btn[i].addEventListener("click", function (event) {
+let consumer_card_info_btn =
+    document.getElementsByClassName("card-info-button");
+for (var i = 0; i < consumer_card_info_btn.length; i++) {
+    consumer_card_info_btn[i].addEventListener("click", function (event) {
         if (event.target.textContent === "Card Info") {
             event.target.textContent = "Hide Card Info";
         } else {
@@ -324,8 +325,19 @@ for (var i = 0; i < card_info_btn.length; i++) {
         }
     });
 }
-
-console.log("✅ JavaScript - Card Info button (finished). ");
+console.log("✅ JavaScript - Consumer Card Info button (finished). ");
+console.log("🟨 JavaScript - Blacklist button. ");
+let blacklist_btn = document.getElementsByClassName("card-info-button");
+for (var i = 0; i < blacklist_btn.length; i++) {
+    blacklist_btn[i].addEventListener("click", function (event) {
+        if (event.target.textContent === "Card Info") {
+            event.target.textContent = "Hide Card Info";
+        } else {
+            event.target.textContent = "Card Info";
+        }
+    });
+}
+console.log("✅ JavaScript - Blacklist button (finished). ");
 console.log("🟨 JavaScript - Consumer Bill Record. ");
 
 var newConsumerCard = new consumerCard(

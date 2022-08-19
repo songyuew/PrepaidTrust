@@ -18,6 +18,16 @@
     "url": "consumer-cards.html",
     "icon": "card-heading"
   },
+  {
+    "name": "Bill Records",
+    "url": "consumer-bill-records.html",
+    "icon": "bar-chart-line-fill"
+  },
+  {
+    "name": "Blacklist",
+    "url": "consumer-blacklist.html",
+    "icon": "bookmarks-fill"
+  },
 
   {
     "name": "________________",
