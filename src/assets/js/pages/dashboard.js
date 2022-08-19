@@ -16,11 +16,24 @@ var optionsProfileVisit = {
 	},
 	series: [{
 		name: 'sales',
-		data: [9,20,30,20,10,20,30,20,10,20,30,20]
+		data: [9, 20, 30, 20, 10, 20, 30, 20, 10, 20, 30, 20], // change to 10 elements
 	}],
 	colors: '#435ebe',
 	xaxis: {
-		categories: ["Jan","Feb","Mar","Apr","May","Jun","Jul", "Aug","Sep","Oct","Nov","Dec"],
+		categories: [
+			"Aug 9",
+      "Aug 10",
+      "Aug 11",
+      "Aug 12",
+      "Aug 13",
+      "Aug 14",
+      "Aug 15",
+      "Aug 16",
+      "Aug 17",
+      "Aug 18",
+      "Aug 19",
+      "Aug 20"
+    ], // change to 10 elements
 	},
 }
 let optionsVisitorsProfile  = {

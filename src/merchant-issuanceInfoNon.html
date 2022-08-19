@@ -1,0 +1,85 @@
+{% set title = 'Merchant Issuance Non-Reloadable' %}
+{% set filename = 'merchant-issuanceInfoNon.html' %}
+
+{% extends 'layouts/vertical-merchant.html' %}
+{% block content %}
+<div class="page-heading">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Modify Card Info</h3>
+                <p class="text-subtitle text-muted">Complete the form and click the "transfer" button to transfer fund privilege to costumer</p>
+            </div>
+            <div class="col-12 col-md-6 order-md-2 order-first">
+                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="merchant-dashboard.html">Merchant Profile</a></li>
+                        <li class="breadcrumb-item"><a href="merchant-cards.html">Select Cards</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Modify Card Info</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sample starts-->
+    <section class="section">
+      <div class="row">
+        <!-- Gift Card -->
+        <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+          <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <h4 class="card-title">Non-Reloadable Card</h4>
+                </div>
+                <img class="img-fluid w-100" src="assets/images/samples/4.png" alt="Gift Card Image">
+            </div>
+            <div class="card-footer">
+              <h6>Card Description: </h6>
+              <h6>Onwer Address: </h6>
+              <h6>Remaining Value: </h6>
+              <h6>Expiration Time: </h6>
+              <h6>Card Description: </h6>
+            </div>
+        </div>
+        </div>
+        <!-- Issuance Info -->
+        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Issuance Information</h4>
+            </div>
+            <div class="card-body">
+              <form class="form" data-parsley-validate>
+                <div class="row">
+                  <div class="col-md-12 col-12">
+                    <div class="form-group mandatory">
+                        <label for="faceValue-column" class="form-label">Face Value of E-voucher</label>
+                        <input type="text" id="faceValue-column" class="form-control" placeholder="" name="faceValue-column" data-parsley-required="true">
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-12">
+                    <div class="form-group mandatory">
+                        <label for="bonus-column" class="form-label">Bonus Rate</label>
+                        <input type="text" id="bonus-column" class="form-control" name="bonus-column" placeholder="eg. 5%" data-parsley-required="true">
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-12">
+                    <div class="form-group mandatory">
+                        <label for="bonus-column" class="form-label">Transfer Fund Privilege</label>
+                        <input type="text" id="bonus-column" class="form-control" name="bonus-column" placeholder="Input wallet address" data-parsley-required="true">
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-12">
+                    <button class="btn btn-outline-primary btn-lg" style="float:right">Issue</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sample ends -->
+</div>
+{% endblock %}

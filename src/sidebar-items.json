@@ -33,6 +33,50 @@
     "name": "________________",
     "isTitle": true
   },
+  {
+    "name": "Merchant",
+    "isTitle": true
+  }, 
+  {
+    "name": "Register",
+    "url": "merchant-registration.html",
+    "icon": "person-badge-fill"
+  },
+  {
+    "name": "Merchant Profile",
+    "url": "merchant-dashboard.html",
+    "icon": "grid"
+  },
+  {
+    "name": "Issue Card",
+    "url": "merchant-addCard.html",
+    "icon": "hexagon-fill"
+  },
+  {
+    "name": "My Cards",
+    "url": "merchant-cards.html",
+    "icon": "stack"
+  },
+  {
+    "name": "Modify Card",
+    "icon": "hexagon-fill",
+    "submenu":[
+      {
+        "name": "Reloadable Card",
+        "url": "merchant-issuanceInfo.html",
+        "icon": "hexagon-fill"
+      },
+      {
+        "name": "Non Reloadable Card",
+        "url": "merchant-issuanceInfoNon.html",
+        "icon": "hexagon-fill"
+      }
+    ]
+  },
+  {
+    "name": "________________",
+    "isTitle": true
+  },
 
   {
     "name": "Menu",
@@ -43,9 +87,6 @@
     "url": "index.html",
     "icon": "grid-fill"
   },
-
-
-
   {
     "name": "Issuance",
     "url": "issue-prepaid-card.html",
