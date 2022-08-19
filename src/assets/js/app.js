@@ -128,17 +128,17 @@ class consumerCard {
     }
 
     displayBillRecord() {
-        consumerCard.consumerCardList =
-            sessionStorage.getItem("consumerCardList");
-        for (var i = 0; i < consumerCard.consumerCardList.length; i++) {
-            Object.assign(this, consumerCard.consumerCardList[i]);
-            console.log(
-                "The type of card " +
-                    i +
-                    " is " +
-                    typeof consumerCard.consumerCardList[i]
-            );
-        }
+        // consumerCard.consumerCardList =
+        //     sessionStorage.getItem("consumerCardList");
+        // for (var i = 0; i < consumerCard.consumerCardList.length; i++) {
+        //     Object.assign(this, consumerCard.consumerCardList[i]);
+        //     console.log(
+        //         "The type of card " +
+        //             i +
+        //             " is " +
+        //             typeof consumerCard.consumerCardList[i]
+        //     );
+        // }
 
         var consumerCard_UI = document.getElementsByClassName("JS-bill-record");
         console.log(consumerCard_UI.length);

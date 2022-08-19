@@ -1,5 +1,5 @@
-{% set title = 'Bill Records' %} {% set filename = 'layout-vertical-navbar.html'
-%} {% extends 'layouts/vertical-navbar.html' %} {% block content %}
+{% set title = 'Blacklist' %} {% set filename = 'layout-vertical-navbar.html' %}
+{% extends 'layouts/vertical-navbar.html' %} {% block content %}
 
 <div class="page-heading">
     <!-- Blacklist Title -->
@@ -37,66 +37,105 @@
 
     <!-- Blacklist HTML -->
     <section class="section">
-        <div class="card">
-            <div class="card-header">Black Lists</div>
-            <div class="card-body">
-                <table class="table table-striped" id="table1">
-                    <thead>
-                        <tr>
-                            <th>Merchant</th>
-                            <th>Blacklist state</th>
-                            <th>Blacklist rate</th>
-                            <th>Options</th>
-                        </tr>
-                    </thead>
-                    <tbody class="consumer-blacklist JS-consumer-blacklist">
-                        <tr>
-                            <td>Merchant 1</td>
-                            <td class="consumer-blacklist-state">Yes</td>
-                            <td>1.35%</td>
-                            <td>
-                                <button class="consumer-blacklist-button-add">
-                                    Add
-                                </button>
-                                <button
-                                    class="consumer-blacklist-button-remove"
-                                >
-                                    Remove
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Merchant 2</td>
-                            <td class="consumer-blacklist-state">No</td>
-                            <td>0.12%</td>
-                            <td>
-                                <button class="consumer-blacklist-button-add">
-                                    Add
-                                </button>
-                                <button
-                                    class="consumer-blacklist-button-remove"
-                                >
-                                    Remove
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Merchant 3</td>
-                            <td class="consumer-blacklist-state">No</td>
-                            <td>1.08%</td>
-                            <td>
-                                <button class="consumer-blacklist-button-add">
-                                    Add
-                                </button>
-                                <button
-                                    class="consumer-blacklist-button-remove"
-                                >
-                                    Remove
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- Card -->
+        <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="card consumer-card" id="example ID">
+                <div class="card-header">
+                    <h3 class="card-title">Card 1</h3>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <text class="card-category">Card Name </text>
+                        <text class="card-text">Card Name</text>
+                    </div>
+                    <div>
+                        <text class="card-category">Merchant Name </text>
+                        <text class="card-text">MerChant Name</text>
+                    </div>
+                    <div class="card-image">
+                        <img
+                            class="img-fluid w-100"
+                            src="assets/images/samples/samples-card/customer-gift-card-sample-1.png"
+                            alt="The Card Image cannot be displayed"
+                        />
+                    </div>
+                    <div class="empty-line"></div>
+                    <div>
+                        <text class="card-text">This is Card Information</text>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="col-xl-8 col-md-9 col-sm-12">
+            <div class="card">
+                <div class="card-header">Black Lists</div>
+                <div class="card-body">
+                    <table class="table table-striped" id="table1">
+                        <thead>
+                            <tr>
+                                <th>Merchant</th>
+                                <th>Blacklist state</th>
+                                <th>Blacklist rate</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody class="consumer-blacklist JS-consumer-blacklist">
+                            <tr>
+                                <td>Merchant 1</td>
+                                <td class="consumer-blacklist-state">Yes</td>
+                                <td>1.35%</td>
+                                <td>
+                                    <button
+                                        class="consumer-blacklist-button-add"
+                                    >
+                                        Add
+                                    </button>
+                                    <button
+                                        class="consumer-blacklist-button-remove"
+                                    >
+                                        Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Merchant 2</td>
+                                <td class="consumer-blacklist-state">No</td>
+                                <td>0.12%</td>
+                                <td>
+                                    <button
+                                        class="consumer-blacklist-button-add"
+                                    >
+                                        Add
+                                    </button>
+                                    <button
+                                        class="consumer-blacklist-button-remove"
+                                    >
+                                        Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Merchant 3</td>
+                                <td class="consumer-blacklist-state">No</td>
+                                <td>1.08%</td>
+                                <td>
+                                    <button
+                                        class="consumer-blacklist-button-add"
+                                    >
+                                        Add
+                                    </button>
+                                    <button
+                                        class="consumer-blacklist-button-remove"
+                                    >
+                                        Remove
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
