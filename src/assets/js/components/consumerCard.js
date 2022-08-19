@@ -58,7 +58,7 @@ class consumerCard {
 
     /* add a consumer card to the consumer card list */
     /* input type: consumerCard class object */
-    add(cC) {
+    addConsumerCard(cC) {
         consumerCard.consumerCardList.push(cC);
     }
 
@@ -100,7 +100,7 @@ class consumerCard {
     }
 
     /* update the consumerCard database by storing the whole class and sharing with other HTML files */
-    update() {
+    updateConsumerCard() {
         sessionStorage.setItem(
             "consumerCardList",
             consumerCard.consumerCardList
@@ -110,7 +110,7 @@ class consumerCard {
     /* change the static variable, targetCardID */
     setTargetCard(sTC_id) {
         targetCardID = sTC_id;
-        update();
+        updateConsumerCard();
     }
 
     /* sort all bill records for one card (given its cardID) */
@@ -219,7 +219,7 @@ var newConsumerCard = new consumerCard(
     "Unknown",
     []
 );
-newConsumerCard.add(newConsumerCard);
+newConsumerCard.addConsumerCard(newConsumerCard);
 newConsumerCard.displayConsumerCard();
 
 console.log("✅ JavaScript - Consumer Card Class (finished). ");
