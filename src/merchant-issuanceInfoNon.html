@@ -1,5 +1,5 @@
-{% set title = 'Merchant Issuance Reloadable' %}
-{% set filename = 'merchant-issuanceInfo.html' %}
+{% set title = 'Merchant Issuance Non-Reloadable' %}
+{% set filename = 'merchant-issuanceInfoNon.html' %}
 
 {% extends 'layouts/vertical-merchant.html' %}
 {% block content %}
@@ -30,11 +30,12 @@
           <div class="card">
             <div class="card-content">
                 <div class="card-body">
-                    <h4 class="card-title">Reloadable Card</h4>
+                    <h4 class="card-title">Non-Reloadable Card</h4>
                 </div>
                 <img class="img-fluid w-100" src="assets/images/samples/4.png" alt="Gift Card Image">
             </div>
             <div class="card-footer">
+              <h6>Card Description: </h6>
               <h6>Onwer Address: </h6>
               <h6>Remaining Value: </h6>
               <h6>Expiration Time: </h6>
@@ -51,34 +52,28 @@
             <div class="card-body">
               <form class="form" data-parsley-validate>
                 <div class="row">
-                    <div class="col-md-12 col-12">
-                        <div class="form-group mandatory">
-                            <label for="max-column" class="form-label">Maximum Top-up Value</label>
-                            <input type="text" id="max-column" class="form-control" placeholder="" name="max-column" data-parsley-required="true">
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-12">
-                      <div class="form-group mandatory">
-                          <label for="min-column" class="form-label">Minimum Top-up Value</label>
-                          <input type="text" id="min-column" class="form-control" name="min-column" placeholder="" data-parsley-required="true">
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-12">
-                      <div class="form-group mandatory">
-                          <label for="bonus-column" class="form-label">Bonus Rate</label>
-                          <input type="text" id="bonus-column" class="form-control" name="bonus-column" placeholder="eg. 5%" data-parsley-required="true">
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-12">
-                      <div class="form-group mandatory">
-                          <label for="bonus-column" class="form-label">Transfer Fund Privilege</label>
-                          <input type="text" id="bonus-column" class="form-control" name="bonus-column" placeholder="Input wallet address" data-parsley-required="true">
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-12" >
-                      <button class="btn btn-outline-primary" style="float:right">Modify</button>
+                  <div class="col-md-12 col-12">
+                    <div class="form-group mandatory">
+                        <label for="faceValue-column" class="form-label">Face Value of E-voucher</label>
+                        <input type="text" id="faceValue-column" class="form-control" placeholder="" name="faceValue-column" data-parsley-required="true">
                     </div>
                   </div>
+                  <div class="col-md-12 col-12">
+                    <div class="form-group mandatory">
+                        <label for="bonus-column" class="form-label">Bonus Rate</label>
+                        <input type="text" id="bonus-column" class="form-control" name="bonus-column" placeholder="eg. 5%" data-parsley-required="true">
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-12">
+                    <div class="form-group mandatory">
+                        <label for="bonus-column" class="form-label">Transfer Fund Privilege</label>
+                        <input type="text" id="bonus-column" class="form-control" name="bonus-column" placeholder="Input wallet address" data-parsley-required="true">
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-12">
+                    <button class="btn btn-outline-primary btn-lg" style="float:right">Issue</button>
+                  </div>
+                </div>
               </form>
             </div>
           </div>

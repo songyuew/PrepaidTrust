@@ -38,14 +38,30 @@
     "icon": "grid"
   },
   {
-    "name": "Select Cards",
+    "name": "Issue Card",
+    "url": "merchant-addCard.html",
+    "icon": "hexagon-fill"
+  },
+  {
+    "name": "My Cards",
     "url": "merchant-cards.html",
     "icon": "stack"
   },
   {
-    "name": "Issue Card",
-    "url": "merchant-issuanceInfo.html",
-    "icon": "hexagon-fill"
+    "name": "Modify Card",
+    "icon": "hexagon-fill",
+    "submenu":[
+      {
+        "name": "Reloadable Card",
+        "url": "merchant-issuanceInfo.html",
+        "icon": "hexagon-fill"
+      },
+      {
+        "name": "Non Reloadable Card",
+        "url": "merchant-issuanceInfoNon.html",
+        "icon": "hexagon-fill"
+      }
+    ]
   },
   {
     "name": "________________",
