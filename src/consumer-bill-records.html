@@ -2,6 +2,7 @@
 %} {% extends 'layouts/vertical-navbar.html' %} {% block content %}
 
 <div class="page-heading">
+    <!-- Bill Record Title -->
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
@@ -9,7 +10,7 @@
                 <p class="text-subtitle text-muted JS-bill-record-card-name">
                     Default card
                 </p>
-                <p class="text-subtitle text-muted JS-bill-record-card-name">
+                <p class="text-subtitle text-muted">
                     <a href="consumer-cards.html"> See all cards </a>
                 </p>
             </div>
@@ -33,5 +34,52 @@
             </div>
         </div>
     </div>
+
+    <!-- Bill Record HTML -->
+    <section class="section">
+        <div class="card">
+            <div class="card-header">Bill Records</div>
+            <div class="card-body">
+                <table class="table table-striped" id="table1">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Merchant</th>
+                            <th>Consumption(HKD)</th>
+                            <th>Balance(HKD)</th>
+                            <th>View on Etherscan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="JS-bill-record">
+                        <tr>
+                            <td>12-08-2022</td>
+                            <td>Prepaid Trust Merchant 1</td>
+                            <td>100</td>
+                            <td>900</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>14-08-2022</td>
+                            <td>Prepaid Trust Merchant 2</td>
+                            <td>50</td>
+                            <td>850</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>17-08-2022</td>
+                            <td>Prepaid Trust Merchant 3</td>
+                            <td>120</td>
+                            <td>730</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 </div>
+{% endblock %} {% block js %}
+
+<script src="assets/js/app.js"></script>
+
 {% endblock %}

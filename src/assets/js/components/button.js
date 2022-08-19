@@ -1,5 +1,3 @@
-app.use("/assets", express.static(path.join(__dirname, "assets")));
-
 console.log("🟨 JavaScript - Card Info button. ");
 
 var card_info_btn = document.getElementsByClassName("card-info-button");

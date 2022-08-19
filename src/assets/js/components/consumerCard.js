@@ -1,7 +1,5 @@
 console.log("🟨 JavaScript - Consumer Card Class. ");
 
-const path = require("path");
-app.use("/assets", express.static(path.join(__dirname, "assets")));
 /* app.use("/assets", express.static("./assets/")); */
 
 class consumerCardBillRecord {
@@ -120,43 +118,73 @@ class consumerCard {
         var i = find_ID(sBR_id);
         switch (sBR_method) {
             case "date":
-                consumerCardList[i].consumerCardList.sort(function (a, b) {
+                consumerCard.consumerCardList[i].cardBilRecords.sort(function (
+                    a,
+                    b
+                ) {
                     return a.date > b.date;
                 });
             case "date_reverse":
-                consumerCardList[i].consumerCardList.sort(function (a, b) {
+                consumerCard.consumerCardList[i].cardBilRecords.sort(function (
+                    a,
+                    b
+                ) {
                     return a.date < b.date;
                 });
             case "merchant":
-                consumerCardList[i].consumerCardList.sort(function (a, b) {
+                consumerCard.consumerCardList[i].cardBilRecords.sort(function (
+                    a,
+                    b
+                ) {
                     return a.merchant > b.merchant;
                 });
             case "merchant_reverse":
-                consumerCardList[i].consumerCardList.sort(function (a, b) {
+                consumerCard.consumerCardList[i].cardBilRecords.sort(function (
+                    a,
+                    b
+                ) {
                     return a.merchant < b.merchant;
                 });
             case "consAmount":
-                consumerCardList[i].consumerCardList.sort(function (a, b) {
+                consumerCard.consumerCardList[i].cardBilRecords.sort(function (
+                    a,
+                    b
+                ) {
                     return a.consAmount > b.consAmount;
                 });
             case "consAmount_reverse":
-                consumerCardList[i].consumerCardList.sort(function (a, b) {
+                consumerCard.consumerCardList[i].cardBilRecords.sort(function (
+                    a,
+                    b
+                ) {
                     return a.consAmount < b.consAmount;
                 });
             case "balance":
-                consumerCardList[i].consumerCardList.sort(function (a, b) {
+                consumerCard.consumerCardList[i].cardBilRecords.sort(function (
+                    a,
+                    b
+                ) {
                     return a.balance > b.balance;
                 });
             case "balance_reverse":
-                consumerCardList[i].consumerCardList.sort(function (a, b) {
+                consumerCard.consumerCardList[i].cardBilRecords.sort(function (
+                    a,
+                    b
+                ) {
                     return a.balance < b.balance;
                 });
             case "viewEther":
-                consumerCardList[i].consumerCardList.sort(function (a, b) {
+                consumerCard.consumerCardList[i].cardBilRecords.sort(function (
+                    a,
+                    b
+                ) {
                     return a.viewEther > b.viewEther;
                 });
             case "viewEther_reverse":
-                consumerCardList[i].consumerCardList.sort(function (a, b) {
+                consumerCard.consumerCardList[i].cardBilRecords.sort(function (
+                    a,
+                    b
+                ) {
                     return a.viewEther < b.viewEther;
                 });
         }
