@@ -8,7 +8,7 @@
             <div class="col-12 col-md-6 order-md-1 order-last">
                 <h3>Blacklist</h3>
                 <p class="text-subtitle text-muted JS-bill-record-card-name">
-                    Default card's blacklist
+                    Blacklist
                 </p>
                 <p class="text-subtitle text-muted">
                     <a href="consumer-cards.html"> See all cards </a>
@@ -34,6 +34,66 @@
             </div>
         </div>
     </div>
+
+    <!-- Blacklist HTML -->
+    <section class="section">
+        <div class="card">
+            <div class="card-header">Black Lists</div>
+            <div class="card-body">
+                <table class="table table-striped" id="table1">
+                    <thead>
+                        <tr>
+                            <th>Merchant</th>
+                            <th>Blacklist state</th>
+                            <th>Blacklist rate</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody class="JS-consumer-blacklist">
+                        <tr>
+                            <td>Merchant 1</td>
+                            <td class="consumer-blacklist-state">Yes</td>
+                            <td>1.35%</td>
+                            <td>
+                                <button class="consumer-blacklist-button red">
+                                    Add
+                                </button>
+                                <button class="consumer-blacklist-button green">
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Merchant 2</td>
+                            <td class="consumer-blacklist-state">No</td>
+                            <td>0.12%</td>
+                            <td>
+                                <button class="consumer-blacklist-button red">
+                                    Add
+                                </button>
+                                <button class="consumer-blacklist-button green">
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Merchant 3</td>
+                            <td class="consumer-blacklist-state">No</td>
+                            <td>1.08%</td>
+                            <td>
+                                <button class="consumer-blacklist-button red">
+                                    Add
+                                </button>
+                                <button class="consumer-blacklist-button green">
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 </div>
 
 {% endblock %} {% block js %}
