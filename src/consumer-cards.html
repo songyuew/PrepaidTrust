@@ -1,9 +1,8 @@
-{% set title = 'Consumer Dashboard' %}
-{% set filename = 'layout-vertical-navbar.html' %}
-{% extends 'layouts/vertical-navbar.html' %}
+{% set title = 'Consumer Dashboard' %} {% set filename = 'consumer-cards.html'
+%} {% extends 'layouts/master.html' %}{% block content %}
 
-{% block content %}
 <div class="page-heading">
+    <!-- Consumer Card Title -->
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
@@ -30,114 +29,15 @@
         </div>
     </div>
 
-    <!-- The consumer cards HTML starts here-->
+    <!-- Consumer cards HTML -->
     <!-- We would like to use JS to fill in the HTML-->
     <section id="consumer-cards">
-
-        <div class="row match-height">
-
-            <div class="col-lg-4 col-md-6 col-sm-12 JS-consumer-cards">
-
-                <!-- Example card. -->
-                <div class="card consumer-card" id="example ID">
-
-                    <!-- Card header -->
-                    <div class="card-header">
-                        <h3 class="card-title">Card 1</h3>
-                    </div>
-
-                    <!-- Card body -->
-                    <div class="card-body">
-
-                        <!-- Information above the Card Info button-->
-                        <p>
-
-                            <!-- Card Name-->
-                            <div>
-                                <text class="card-category">Card Name  </text>
-                                <text class="card-text">Default name</text>
-                            </div>
-
-                            <!-- Merchant Name -->
-                            <div>
-                                <text class="card-category">Merchant Name  </text>
-                                <text class="card-text">Default merchant</text>
-                            </div>
-
-                            <!-- Card Image -->
-                            <div class="card-image">
-                                <img class="img-fluid w-100" src="assets/images/samples/samples-card/customer-gift-card.png" alt="The Card Image cannot be displayed">
-                            </div>
-
-                            <div class="empty-line"></div>
-
-                            <!-- Card Info -->
-                            <div>
-                                <text class="card-text">Default card information</text>
-                            </div>
-                            <div class="empty-line"></div>
-
-                            <!-- Card Info Button-->
-                            <div>
-                                <button 
-                                    class="card-info-button"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#card-info"
-                                    aria-expanded="true"
-                                    aria-controls="card-info"
-                                >Card Info</button>
-                            </div>
-
-                        </p>
-
-                        <!-- Card Info -->
-                        <!-- Try: collapse -->
-                        <div class="collapse" id="card-info">
-
-                            <!-- Remaining value -->
-                            <div>
-                                <text class="card-category darkgreen">Remaining value  </text>
-                                <text class="card-text">Unknown</text>
-                            </div>
-
-                            <!-- Expiration time -->
-                            <div>
-                                <text class="card-category red">Expiration time  </text>
-                                <text class="card-text">Unknown</text>
-                            </div>
-
-                            <!-- Bill records -->
-                            <div id="default-consumer-card">
-                                <a onclick="consumerCard.setTargetCard(this.id)" href="consumer-bill-records.html" class="card-category grey card-link">Bill records</a>
-                            </div>
-
-                            <!-- Add black list -->
-                            <div>
-                                <a href=# class="card-category grey card-link">Add black list</a>
-                            </div>
-
-                            <div class="empty-line"></div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
+        <div class="row JS-consumer-cards"></div>
     </section>
-
 </div>
-{% endblock %}
 
-{% block js %}
+{% endblock %} {% block js %}
 
-<!-- Card Info Button function-->
-<script type="text/javascript" src="assets/js/components/button.js"></script>
+<script src="assets/js/app.js"></script>
 
-<!-- comsumerCard Database function -->
-<script type="text/javascript" src="assets/js/components/consumerCard.js"></script>
 {% endblock %}
