@@ -327,19 +327,37 @@ for (var i = 0; i < consumer_card_info_btn.length; i++) {
 }
 console.log("✅ JavaScript - Consumer Card Info button (finished). ");
 console.log("🟨 JavaScript - Blacklist button. ");
-let blacklist_btn = document.getElementsByClassName("card-info-button");
+let blacklist_btn = document.getElementsByClassName(
+    "consumer-blacklist-button-add"
+);
 for (var i = 0; i < blacklist_btn.length; i++) {
     blacklist_btn[i].addEventListener("click", function (event) {
-        if (event.target.textContent === "Card Info") {
-            event.target.textContent = "Hide Card Info";
-        } else {
-            event.target.textContent = "Card Info";
+        let blacklist_status =
+            event.target.parentNode.parentNode.getElementsByClassName(
+                "consumer-blacklist-state"
+            );
+        for (var j = 0; j < blacklist_status.length; j++) {
+            blacklist_status[j].textContent = "Yes";
+        }
+    });
+}
+
+blacklist_btn = document.getElementsByClassName(
+    "consumer-blacklist-button-remove"
+);
+for (var i = 0; i < blacklist_btn.length; i++) {
+    blacklist_btn[i].addEventListener("click", function (event) {
+        let blacklist_status =
+            event.target.parentNode.parentNode.getElementsByClassName(
+                "consumer-blacklist-state"
+            );
+        for (var j = 0; j < blacklist_status.length; j++) {
+            blacklist_status[j].textContent = "No";
         }
     });
 }
 console.log("✅ JavaScript - Blacklist button (finished). ");
 console.log("🟨 JavaScript - Consumer Bill Record. ");
-
 var newConsumerCard = new consumerCard(
     "Card",
     "Default name",
@@ -353,5 +371,4 @@ var newConsumerCard = new consumerCard(
     []
 );
 newConsumerCard.displayBillRecord();
-
 console.log("✅ JavaScript - Consumer Bill Record (finished). ");

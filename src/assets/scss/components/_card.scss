@@ -179,6 +179,39 @@
 }
 /* End of definition */
 
+.consumer-blacklist {
+    .consumer-blacklist-button-add {
+        font-weight: 5000;
+        padding: 0.5rem 1rem;
+        background: transparent;
+        border: 1px solid;
+        border-radius: 0.3rem;
+    }
+    .consumer-blacklist-button-add:hover {
+        background: rgba(168, 0, 0, 0.2);
+        box-shadow: 0rem 0rem 0.2rem rgba(168, 0, 0, 0.8);
+    }
+
+    .consumer-blacklist-button-add:active {
+        background: rgba(168, 0, 0, 0.8);
+    }
+
+    .consumer-blacklist-button-remove {
+        font-weight: 5000;
+        padding: 0.5rem 1rem;
+        background: transparent;
+        border: 1px solid;
+        border-radius: 0.3rem;
+    }
+    .consumer-blacklist-button-remove:hover {
+        background: rgba(0, 168, 64, 0.2);
+        box-shadow: 0rem 0rem 0.2rem rgba(0, 168, 64, 0.8);
+    }
+    .consumer-blacklist-button-remove:active {
+        background: rgba(0, 168, 64, 0.8);
+    }
+}
+
 .pricing {
     .card {
         box-shadow: none;
