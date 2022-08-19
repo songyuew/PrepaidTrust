@@ -71,9 +71,7 @@ class consumerCard {
     /* add a consumer card to the consumer card list */
     /* input type: consumerCard class object */
     addConsumerCard(cC) {
-        console.log("A card is being added!!!!!!!!!!!!!!!!!");
         console.log(cC);
-
         consumerCard.consumerCardList.push(cC);
         console.log(consumerCard.consumerCardList);
     }
@@ -130,16 +128,23 @@ class consumerCard {
     }
 
     displayBillRecord() {
-        console.log("Displaying bill record!!!!!!!!!!!");
-        // consumerCard.consumerCardList =
-        //     sessionStorage.getItem("consumerCardList");
+        consumerCard.consumerCardList =
+            sessionStorage.getItem("consumerCardList");
+        for (var i = 0; i < consumerCard.consumerCardList.length; i++) {
+            Object.assign(this, consumerCard.consumerCardList[i]);
+            console.log(
+                "The type of card " +
+                    i +
+                    " is " +
+                    typeof consumerCard.consumerCardList[i]
+            );
+        }
+
         var consumerCard_UI = document.getElementsByClassName("JS-bill-record");
-        console.log("Loaded!!!");
         console.log(consumerCard_UI.length);
         console.log(consumerCard.consumerCardList);
         for (var i = 0; i < consumerCard_UI.length; i++) {
-            console.log("Looping cards!!!");
-            consumerCard_UI[i].innerHTML = "";
+            // consumerCard_UI[i].innerHTML = "";
             let index = this.find_ID(this.targetCardID);
             console.log(111);
             console.log(index);
