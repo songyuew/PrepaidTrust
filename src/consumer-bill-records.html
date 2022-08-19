@@ -35,49 +35,88 @@
         </div>
     </div>
 
-    <!-- Bill Record HTML -->
+    <!-- Bill Table HTML -->
     <section class="section">
-        <div class="card">
-            <div class="card-header">Bill Records</div>
-            <div class="card-body">
-                <table class="table table-striped" id="table1">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Merchant</th>
-                            <th>Consumption(HKD)</th>
-                            <th>Balance(HKD)</th>
-                            <th>View on Etherscan</th>
-                        </tr>
-                    </thead>
-                    <tbody class="JS-bill-record">
-                        <tr>
-                            <td>12-08-2022</td>
-                            <td>Prepaid Trust Merchant 1</td>
-                            <td>100</td>
-                            <td>900</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>14-08-2022</td>
-                            <td>Prepaid Trust Merchant 2</td>
-                            <td>50</td>
-                            <td>850</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>17-08-2022</td>
-                            <td>Prepaid Trust Merchant 3</td>
-                            <td>120</td>
-                            <td>730</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="row">
+            <!-- Card -->
+            <div class="col-xl-4 col-md-3 col-sm-0">
+                <div class="card consumer-card" id="example ID">
+                    <div class="card-header">
+                        <h3 class="card-title">Card 1</h3>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <text class="card-category">Card Name </text>
+                            <text class="card-text">Card Name</text>
+                        </div>
+                        <div>
+                            <text class="card-category">Merchant Name </text>
+                            <text class="card-text">MerChant Name</text>
+                        </div>
+                        <div class="card-image">
+                            <img
+                                class="img-fluid w-100"
+                                src="assets/images/samples/samples-card/customer-gift-card-sample-1.png"
+                                alt="The Card Image cannot be displayed"
+                            />
+                        </div>
+                        <div class="empty-line"></div>
+                        <div>
+                            <text class="card-text"
+                                >This is Card Information</text
+                            >
+                        </div>
+                        <div class="empty-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="col-xl-8 col-md-9 col-sm-12">
+                <div class="card">
+                    <div class="card-header">Bill Records</div>
+                    <div class="card-body">
+                        <table class="table table-striped" id="table2">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Merchant</th>
+                                    <th>Consumption(HKD)</th>
+                                    <th>Balance(HKD)</th>
+                                    <th>View on Etherscan</th>
+                                </tr>
+                            </thead>
+                            <tbody class="JS-bill-record">
+                                <tr>
+                                    <td>12-08-2022</td>
+                                    <td>Prepaid Trust Merchant 1</td>
+                                    <td>100</td>
+                                    <td>900</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>14-08-2022</td>
+                                    <td>Prepaid Trust Merchant 2</td>
+                                    <td>50</td>
+                                    <td>850</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>17-08-2022</td>
+                                    <td>Prepaid Trust Merchant 3</td>
+                                    <td>120</td>
+                                    <td>730</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 </div>
+
 {% endblock %} {% block js %}
 
 <script src="assets/js/app.js"></script>

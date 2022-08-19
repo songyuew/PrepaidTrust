@@ -128,6 +128,8 @@ class consumerCard {
     }
 
     displayBillRecord() {
+        let TCID = sessionStorage.getItem("consumerTargetCardID");
+        console.log("I heard the target card ID: " + TCID);
         // consumerCard.consumerCardList =
         //     sessionStorage.getItem("consumerCardList");
         // for (var i = 0; i < consumerCard.consumerCardList.length; i++) {
@@ -139,40 +141,38 @@ class consumerCard {
         //             typeof consumerCard.consumerCardList[i]
         //     );
         // }
-
-        var consumerCard_UI = document.getElementsByClassName("JS-bill-record");
-        console.log(consumerCard_UI.length);
-        console.log(consumerCard.consumerCardList);
-        for (var i = 0; i < consumerCard_UI.length; i++) {
-            // consumerCard_UI[i].innerHTML = "";
-            let index = this.find_ID(this.targetCardID);
-            console.log(111);
-            console.log(index);
-
-            console.log(consumerCard.consumerCardList[0]);
-            console.log(consumerCard.consumerCardList[1]);
-            let a = consumerCard.consumerCardList;
-            console.log(typeof a);
-            // console.log();
-            for (
-                var j = 0;
-                j < consumerCard.consumerCardList[index].cardBilRecords.length;
-                j++
-            ) {
-                consumerCard_UI[i].insertAdjacentHTML(
-                    "beforeend",
-                    "<tr><td>consumerCard.consumerCardList[index].cardBilRecords[j].date</td>" +
-                        "<td>consumerCard.consumerCardList[index].cardBilRecords[j].merchant</td>" +
-                        "<td>consumerCard.consumerCardList[index].cardBilRecords[j].consAmount</td>" +
-                        "<td>consumerCard.consumerCardList[index].cardBilRecords[j].balance</td>" +
-                        "<td>consumerCard.consumerCardList[index].cardBilRecords[j].viewEther</td></tr>"
-                );
-            }
-        }
+        // var consumerCard_UI = document.getElementsByClassName("JS-bill-record");
+        // console.log(consumerCard_UI.length);
+        // console.log(consumerCard.consumerCardList);
+        // for (var i = 0; i < consumerCard_UI.length; i++) {
+        //     // consumerCard_UI[i].innerHTML = "";
+        //     let index = this.find_ID(this.targetCardID);
+        //     console.log(111);
+        //     console.log(index);
+        //     console.log(consumerCard.consumerCardList[0]);
+        //     console.log(consumerCard.consumerCardList[1]);
+        //     let a = consumerCard.consumerCardList;
+        //     console.log(typeof a);
+        //     // console.log();
+        //     for (
+        //         var j = 0;
+        //         j < consumerCard.consumerCardList[index].cardBilRecords.length;
+        //         j++
+        //     ) {
+        //         consumerCard_UI[i].insertAdjacentHTML(
+        //             "beforeend",
+        //             "<tr><td>consumerCard.consumerCardList[index].cardBilRecords[j].date</td>" +
+        //                 "<td>consumerCard.consumerCardList[index].cardBilRecords[j].merchant</td>" +
+        //                 "<td>consumerCard.consumerCardList[index].cardBilRecords[j].consAmount</td>" +
+        //                 "<td>consumerCard.consumerCardList[index].cardBilRecords[j].balance</td>" +
+        //                 "<td>consumerCard.consumerCardList[index].cardBilRecords[j].viewEther</td></tr>"
+        //         );
+        //     }
+        // }
     }
 
     /* remove a customer card from the database (given its cardID) */
-    remove(r_id) {
+    removeConsumerCard(r_id) {
         for (var i = 0; i < consumerCard.consumerCardList.length; i++) {
             if (consumerCard.consumerCardList[i].id === r_id) {
                 consumerCard.consumerCardList.splice(i, 1);
@@ -182,10 +182,19 @@ class consumerCard {
     }
 
     /* update the consumerCard database by storing the whole class and sharing with other HTML files */
-    update() {
+    updateConsumerCard() {
         sessionStorage.setItem(
             "consumerCardList",
             consumerCard.consumerCardList
+        );
+        sessionStorage.setItem(
+            "consumerTargetCardID",
+            consumerCard.targetCardID
+        );
+        console.log(
+            "The target card id (" +
+                consumerCard.targetCardID +
+                ") is being stored. "
         );
     }
 
@@ -197,7 +206,7 @@ class consumerCard {
                 consumerCard.consumerCardList[index].cardName
         );
         this.targetCardID = sTC_id;
-        consumerCard.update();
+        consumerCard.updateConsumerCard();
     }
 
     /* add a single bill record (given its cardID) */
@@ -306,7 +315,7 @@ newConsumerCard.addConsumerCard(newConsumerCard);
 newConsumerCard.addConsumerCard(newConsumerCard2);
 newConsumerCard.addConsumerCard(newConsumerCard3);
 newConsumerCard.addConsumerCard(newConsumerCard4);
-newConsumerCard.update();
+newConsumerCard.updateConsumerCard();
 newConsumerCard.displayConsumerCard();
 
 console.log("✅ JavaScript - Consumer Card Class (finished). ");
