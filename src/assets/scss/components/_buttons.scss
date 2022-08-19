@@ -1,11 +1,11 @@
-
 .btn {
-    i,svg {
+    i,
+    svg {
         width: 1rem;
         height: 1rem;
-    } 
+    }
     &.icon {
-        padding: .4rem .6rem;
+        padding: 0.4rem 0.6rem;
         svg {
             width: 1rem;
             height: 1rem;
@@ -29,20 +29,19 @@
             background-color: #fff;
         }
     }
-    
+
     @each $key, $value in $theme-colors-light {
         &.btn-light-#{$key} {
             background-color: $value;
-            color: darken($value,80%)
+            color: darken($value, 80%);
         }
     }
-    
+
     @each $key, $value in $theme-colors {
         &.btn-#{$key} {
             @if $key == "light" {
                 color: $body-color;
-            }
-            @else{
+            } @else {
                 color: #fff;
             }
         }
@@ -53,14 +52,30 @@
 }
 .btn-group {
     &:not(.dropdown) .btn:not([class*="btn-"]) {
-        border: 1px solid #DFE3E7;
+        border: 1px solid #dfe3e7;
     }
     & > .btn {
-        border-radius: .267rem;
+        border-radius: 0.267rem;
     }
 }
 .buttons {
     .btn {
         margin: 0 10px 10px 0;
+    }
+}
+
+.consumer-blacklist-button {
+    font-weight: 5000;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 0.3rem;
+    .red {
+        background-color: rgb(168, 0, 0);
+        border-color: rgb(168, 0, 0);
+    }
+    .green {
+        background-color: rgb(0, 168, 64);
+        border-color: rgb(0, 168, 64);
     }
 }
