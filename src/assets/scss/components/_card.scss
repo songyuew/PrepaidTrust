@@ -131,14 +131,7 @@
             white-space: pre-wrap;
         }
 
-        .card-link {
-            color: var(--grey);
-        }
-        .link-darkgreen:hover {
-            text-decoration: underline !important;
-            color: var(--darkgreen) !important;
-        }
-        .link-black:hover {
+        .card-link:hover {
             text-decoration: underline !important;
             color: var(--black) !important;
         }
