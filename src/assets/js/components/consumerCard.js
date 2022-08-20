@@ -58,7 +58,7 @@ class consumerCard {
 
     /* add a consumer card to the consumer card list */
     /* input type: consumerCard class object */
-    add(cC) {
+    addConsumerCard(cC) {
         consumerCard.consumerCardList.push(cC);
     }
 
@@ -77,7 +77,7 @@ class consumerCard {
                         '<br>    <div><text class="card-category">Merchant Name  </text><text class="card-text">Default merchant</text></div>' +
                         '<br>    <div class="card-image"><img class="img-fluid w-100" src="assets/images/samples/samples-card/customer-gift-card.png" alt="The Card Image cannot be displayed"></div>' +
                         '<br>    <div class="empty-line"></div><div><text class="card-text">Default card information</text></div><div class="empty-line"></div>' +
-                        '<br>    <div><button class="card-info-button" type="button" data-bs-toggle="collapse" data-bs-target="#card-info" aria-expanded="true" aria-controls="card-info">Card Info</button></div></p>' +
+                        '<br>    <div><button class="card-info-button-purple" type="button" data-bs-toggle="collapse" data-bs-target="#card-info" aria-expanded="true" aria-controls="card-info">Card Info</button></div></p>' +
                         '<br><div class="collapse" id="card-info">' +
                         '<br>    <div><text class="card-category darkgreen">Remaining value  </text><text class="card-text">Unknown</text></div>' +
                         '<br>    <div><text class="card-category red">Expiration time  </text><text class="card-text">Unknown</text></div>' +
@@ -100,7 +100,7 @@ class consumerCard {
     }
 
     /* update the consumerCard database by storing the whole class and sharing with other HTML files */
-    update() {
+    updateConsumerCard() {
         sessionStorage.setItem(
             "consumerCardList",
             consumerCard.consumerCardList
@@ -110,7 +110,7 @@ class consumerCard {
     /* change the static variable, targetCardID */
     setTargetCard(sTC_id) {
         targetCardID = sTC_id;
-        update();
+        updateConsumerCard();
     }
 
     /* sort all bill records for one card (given its cardID) */
@@ -219,7 +219,7 @@ var newConsumerCard = new consumerCard(
     "Unknown",
     []
 );
-newConsumerCard.add(newConsumerCard);
+newConsumerCard.addConsumerCard(newConsumerCard);
 newConsumerCard.displayConsumerCard();
 
 console.log("✅ JavaScript - Consumer Card Class (finished). ");

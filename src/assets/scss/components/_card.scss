@@ -146,21 +146,59 @@
             padding-bottom: 0.5rem !important;
         }
 
-        .card-info-button {
+        .card-info-button-yellow {
+            font-weight: 5000;
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border-color: rgb(161, 150, 0);
+            border: 1px solid;
+            border-radius: 0.3rem;
+            text-align:center; 
+        }
+
+        .card-info-button-yellow:hover {
+            background: rgba(161, 150, 0, 0.2);
+            box-shadow: 0rem 0rem 0.2rem rgba(161, 150, 0, 0.8);
+        }
+
+        .card-info-button-yellow:active {
+            background: rgba(161, 150, 0, 1);
+        }
+
+        .card-info-button-green {
+            font-weight: 5000;
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border-color: rgb(0, 168, 64);
+            border: 1px solid;
+            border-radius: 0.3rem;
+            text-align:center; 
+        }
+
+        .card-info-button-green:hover {
+            background: rgba(0, 168, 64, 0.2);
+            box-shadow: 0rem 0rem 0.2rem rgba(0, 168, 64, 0.8);
+        }
+
+        .card-info-button-green:active {
+            background: rgba(0, 168, 64, 1);
+        }
+
+        .card-info-button-purple {
             font-weight: 5000;
             padding: 0.5rem 1rem;
             background: transparent;
             border-color: purple;
             border: 1px solid;
-            border-radius: 0.3rem;
+            border-radius: 0.3rem; 
         }
 
-        .card-info-button:hover {
+        .card-info-button-purple:hover {
             background: rgba(128, 0, 128, 0.2);
             box-shadow: 0rem 0rem 0.2rem rgba(128, 0, 128, 0.8);
         }
 
-        .card-info-button:active {
+        .card-info-button-purple:active {
             background: rgba(128, 0, 128, 1);
         }
 
@@ -175,6 +213,23 @@
         .empty-line01 {
             padding-top: 0.1rem !important;
         }
+    }
+
+    .consumer-card-top-button {
+        font-weight: 5000;
+        padding: 0.5rem 1rem;
+        background: transparent;
+        border: 1px solid;
+        border-radius: 0.3rem;
+        float: right;
+    }
+    .consumer-card-top-button:hover {
+        background: rgba(168, 0, 0, 0.2);
+        box-shadow: 0rem 0rem 0.2rem rgba(168, 0, 0, 0.8);
+    }
+
+    .consumer-card-top-button:active {
+        background: rgba(168, 0, 0, 0.8);
     }
 }
 /* End of definition */
