@@ -84,7 +84,7 @@ class consumerCard {
             for (var j = 0; j < consumerCard.consumerCardList.length; j++) {
                 consumerCard_UI[i].insertAdjacentHTML(
                     "beforeend",
-                    '<div class="col-xl-4 col-md-6 col-sm-12">' +
+                    '<div class="col-xl-6 col-md-6 col-sm-12">' +
                         '<div class="card consumer-card" id="example ID">' +
                         '<div class="card-header"><h3 class="card-title">' +
                         consumerCard.consumerCardList[j].cardHeader +
@@ -102,9 +102,12 @@ class consumerCard {
                         '    <div class="empty-line"></div><div><text class="card-text">' +
                         consumerCard.consumerCardList[j].cardInformation +
                         '</text></div><div class="empty-line"></div>' +
-                        '    <div><button class="card-info-button" type="button" data-bs-toggle="collapse" data-bs-target="#card-info' +
+                        '    <div class="row"><button class="card-info-button-purple" type="button" data-bs-toggle="collapse" data-bs-target="#card-info' +
                         consumerCard.consumerCardList[j].id +
-                        '" aria-expanded="true" aria-controls="card-info">Card Info</button></div></p>' +
+                        '" aria-expanded="true" aria-controls="card-info">Card Info</button>'
+                        + '<a class="card-info-button-green type="button" href="topup.html">Top Up</a>'
+                        + '<a class="card-info-button-yellow type="button" href="spend.html">Pay</a>'
+                        + '</div></p>' +
                         '<div class="collapse" id="card-info' +
                         consumerCard.consumerCardList[j].id +
                         '">' +
@@ -237,94 +240,41 @@ class consumerCard {
 }
 
 var newConsumerCard = new consumerCard(
-    "Card 1",
-    "Default name",
-    "Default merchant",
-    "assets/images/samples/samples-card/customer-gift-card-sample-1.png",
-    "Default card information",
-    0,
-    0,
+    "Starbucks",
+    "Starbucks Gift Card ($1000)",
+    "Starbucks® Hong Kong",
+    "assets/images/samples/samples-card/customer-gift-card-sample-4.png",
+    "Give a Starbucks Card to gift, reward, incentivize, or show appreciation towards your customers, clients and team members.",
+    1000,
+    730,
     "Unknown",
     "Unknown"
 );
 newConsumerCard.addConsumerCardBillRecord(
     newConsumerCard.targetCardID,
-    new Date("2022-01-01"),
-    "Andy",
+    new Date("2022-08-12"),
+    "Starbucks® Hong Kong (HKU)",
     100,
     900,
     "Unknown"
 );
 newConsumerCard.addConsumerCardBillRecord(
     newConsumerCard.targetCardID,
-    new Date("2022-01-04"),
-    "David",
-    60,
-    840,
+    new Date("2022-08-14"),
+    "Starbucks® Hong Kong (Tsim Sha Tsui)",
+    50,
+    850,
     "Unknown"
 );
 newConsumerCard.addConsumerCardBillRecord(
     newConsumerCard.targetCardID,
-    new Date("2022-01-06"),
-    "Jim",
-    90,
-    750,
-    "Unknown"
-);
-newConsumerCard.addConsumerCardBillRecord(
-    newConsumerCard.targetCardID,
-    new Date("2022-01-15"),
-    "Sistine",
-    231,
-    519,
-    "Unknown"
-);
-newConsumerCard.addConsumerCardBillRecord(
-    newConsumerCard.targetCardID,
-    new Date("2022-01-20"),
-    "Aaron",
-    500,
-    19,
-    "Unknown"
-);
-
-var newConsumerCard2 = new consumerCard(
-    "Card 2",
-    "Default name 2",
-    "Default merchant",
-    "assets/images/samples/samples-card/customer-gift-card-sample-2.png",
-    "Default card information",
-    0,
-    0,
-    "Unknown",
-    "Unknown"
-);
-var newConsumerCard3 = new consumerCard(
-    "Card 3",
-    "Default name 3",
-    "Default merchant",
-    "assets/images/samples/samples-card/customer-gift-card-sample-3.png",
-    "Default card information",
-    0,
-    0,
-    "Unknown",
-    "Unknown"
-);
-var newConsumerCard4 = new consumerCard(
-    "Card 4",
-    "Default name 4",
-    "Default merchant",
-    "assets/images/samples/samples-card/customer-gift-card-sample-4.png",
-    "Default card information",
-    0,
-    0,
-    "Unknown",
+    new Date("2022-08-17"),
+    "Starbucks® Hong Kong (Central)",
+    120,
+    730,
     "Unknown"
 );
 newConsumerCard.addConsumerCard(newConsumerCard);
-newConsumerCard.addConsumerCard(newConsumerCard2);
-newConsumerCard.addConsumerCard(newConsumerCard3);
-newConsumerCard.addConsumerCard(newConsumerCard4);
 newConsumerCard.updateConsumerCard();
 newConsumerCard.displayConsumerCard();
 
@@ -334,7 +284,7 @@ console.log("✅ JavaScript - Consumer Card Class (finished). ");
 console.log("🟨 JavaScript - Consumer Card Info button. ");
 
 let consumer_card_info_btn =
-    document.getElementsByClassName("card-info-button");
+    document.getElementsByClassName("card-info-button-purple");
 for (var i = 0; i < consumer_card_info_btn.length; i++) {
     consumer_card_info_btn[i].addEventListener("click", function (event) {
         if (event.target.textContent === "Card Info") {
