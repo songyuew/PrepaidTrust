@@ -6,7 +6,7 @@ PrepaidTrust is a blockchain-based one-stop decentralised prepaid card platform 
 
 
 ## Usage
-- Clone the repository `git clone https://github.com/zuramai/mazer`
+- Clone the repository `git clone https://github.com/songyuew/PrepaidTrust/tree/Keff-4`
 - Install dependencies using the node package manager of your choice. For example run `npm install` 
 - Files are bundled by Laravel Mix to the dist folder.
     - Either run `npm run hot` and open `http://localhost:8080` to see a hot-reloading copy of the generated files
