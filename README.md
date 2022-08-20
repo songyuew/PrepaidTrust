@@ -6,10 +6,8 @@ PrepaidTrust is a blockchain-based one-stop decentralised prepaid card platform 
 
 
 ## Usage
-#### Using a ready-made built (recommended)
-Download the latest release from the [releases page](https://github.com/zuramai/mazer/releases "releases page")
-Open the index HTML file and explore the source code.
-#### Building yourself
+
+### Building yourself
 - Clone the repository `git clone https://github.com/zuramai/mazer`
 - Install dependencies using the node package manager of your choice. For example run `npm install` 
 - Files are bundled by Laravel Mix to the dist folder.
@@ -23,6 +21,6 @@ Open the index HTML file and explore the source code.
     - `docker run -it -d -p 8080:80 --name mazer mazer-frontend`
     - Open `http://localhost:8080`
 
-# Acknowledgement
-
-- Template: [Mazer](https://github.com/zuramai/mazer), created by <a href="https://saugi.me">Saugi</a>.
+## Acknowledgement
+### Bootstrap Template
+- [Mazer](https://github.com/zuramai/mazer), created by <a href="https://saugi.me">Saugi</a>.
