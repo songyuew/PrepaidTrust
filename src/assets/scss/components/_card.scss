@@ -176,6 +176,23 @@
             padding-top: 0.1rem !important;
         }
     }
+
+    .consumer-card-top-button {
+        font-weight: 5000;
+        padding: 0.5rem 1rem;
+        background: transparent;
+        border: 1px solid;
+        border-radius: 0.3rem;
+        float: right;
+    }
+    .consumer-card-top-button:hover {
+        background: rgba(168, 0, 0, 0.2);
+        box-shadow: 0rem 0rem 0.2rem rgba(168, 0, 0, 0.8);
+    }
+
+    .consumer-card-top-button:active {
+        background: rgba(168, 0, 0, 0.8);
+    }
 }
 /* End of definition */
 

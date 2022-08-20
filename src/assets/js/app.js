@@ -116,12 +116,14 @@ class consumerCard {
                         '    <div><text class="card-category red">Expiration date  </text><text class="card-text">' +
                         consumerCard.consumerCardList[j].cardExpDate +
                         "</text></div>" +
-                        '    <div id="default-consumer-card"><a onclick="setTargetCard(' +
-                        consumerCard.consumerCardList[j].id +
-                        ')" href="consumer-bill-records.html" ' +
+                        '    <div id="default-consumer-card"><a onclick="testfunction()" href="#" ' +
                         'class="card-category grey card-link">Bill records</a></div>' +
                         '    <div><a href=# class="card-category grey card-link">Add black list</a></div>' +
                         '    <div class="empty-line"></div></div></div></div></div>'
+
+                    /* consumerCard.setTargetCard(' +
+                        consumerCard.consumerCardList[j].id +
+                        ')  */
                 );
             }
         }
@@ -202,11 +204,19 @@ class consumerCard {
     setTargetCard(sTC_id) {
         let index = this.find_ID(sTC_id);
         console.log(
-            "The target consumer card is being set to: " +
-                consumerCard.consumerCardList[index].cardName
+            "🟥 The target consumer card is being set to: " +
+                consumerCard.sTC_id
         );
-        this.targetCardID = sTC_id;
-        consumerCard.updateConsumerCard();
+        consumerCard.targetCardID = 5; /* 🟥 */
+        sessionStorage.setItem(
+            "consumerTargetCardID",
+            consumerCard.targetCardID
+        );
+        console.log(
+            "The target card id (" +
+                consumerCard.targetCardID +
+                ") is being stored. "
+        );
     }
 
     /* add a single bill record (given its cardID) */
