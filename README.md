@@ -1,8 +1,10 @@
 <h1 align="center">Prepaid Trust</h1>
 
+PrepaidTrust is a blockchain-based one-stop decentralised prepaid card platform to facilitate the issuance, purchase, transferring and consumption of prepaid cards.
+
 ![PrepaidTrust Logo](https://github.com/songyuew/PrepaidTrust/blob/Keff-4/src/assets/images/logo/logo_light.png)
 
-PrepaidTrust is a blockchain-based one-stop decentralised prepaid card platform to facilitate the issuance, purchase, transferring and consumption of prepaid cards.![process.png](https://github.com/songyuew/PrepaidTrust/blob/Keff-4/process.png)
+![process.png](https://github.com/songyuew/PrepaidTrust/blob/Keff-4/process.png)
 
 
 ## Usage
